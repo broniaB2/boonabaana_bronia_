@@ -3,7 +3,7 @@
 class Employee:
     def __init__(self, name, employee_id):
         self.name = name
-        self.employee_id = employee_id  # Fixed: added assignment
+        self.employee_id = employee_id  
     
     def compute_salary(self):
         return 0
@@ -44,7 +44,7 @@ class HourlyEmployee(Employee):
         self.hourly_rate = hourly_rate
         self.hours_worked = hours_worked  
 
-    def compute_salary(self):  # Fixed: renamed to match parent class method
+    def compute_salary(self):  
         return self.hourly_rate * self.hours_worked
     
     def display_info(self):
@@ -55,7 +55,7 @@ class HourlyEmployee(Employee):
 print("HourlyEmployee MRO:", HourlyEmployee.__mro__)
 
 emp1 = MonthlypaidEmployee("Bronia B", "E01", 2000000)
-emp2 = Per_daypaidEmployee("Bridget", "E02", 20, 90000)  # Fixed: swapped days and rate to make sense
+emp2 = Per_daypaidEmployee("Bridget", "E02", 20, 90000)  
 emp3 = HourlyEmployee("Bruno T", "E03", 5000, 100)
 
 for emp in [emp1, emp2, emp3]:
